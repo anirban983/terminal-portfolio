@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/_variables.scss';
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-blue);
+
+  @extend .font-family-monospace;
+  @extend .text-columbia-blue;
+}
+
+.font-family-monospace {
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.text-columbia-blue {
+  color: var(--columbia-blue);
+}
+
+.text-bright-pink {
+  color: var(--bright-pink);
+}
+
+.text-guppie-green {
+  color: var(--guppie-green);
+}

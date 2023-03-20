@@ -1,0 +1,20 @@
+.title-bar {
+  background-color: #e5e4e2;
+  padding: 0.5rem 1rem;
+
+  .window-btns {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    img {
+      width: 20px;
+      margin-right: 5px;
+      cursor: pointer;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+}

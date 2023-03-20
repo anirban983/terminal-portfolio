@@ -1,0 +1,14 @@
+.run-command {
+  input {
+    color: var(--columbia-blue);
+    caret-color: var(--guppie-green);
+    background: transparent;
+    outline: none;
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="terminal">
+  <ng-container *ngFor="let commandItem of commandItems">
+    <app-run-command [commandItem]="commandItem" (executeCommand)="executeCommand($event)"> </app-run-command>
+
+    <div *ngIf="commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">
+      <app-welcome *ngSwitchCase="'welcome'"></app-welcome>
+      <app-help *ngSwitchCase="'help'"></app-help>
+    </div>
+
+    <div *ngIf="!commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">
+      <app-not-found [command]="commandItem.command"></app-not-found>
+    </div>
+  </ng-container>
+</div>
