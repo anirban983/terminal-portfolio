@@ -9,7 +9,7 @@
     "test": "ng test",
     "prepare": "husky install",
     "lint": "ng lint",
-    "build:prod": "ng build --deploy-url /terminal-portfolio/"
+    "build:prod": "ng build --base-href /terminal-portfolio/"
   },
   "private": true,
   "dependencies": {
