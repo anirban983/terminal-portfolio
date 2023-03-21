@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  OnDestroy,
+  QueryList,
+  ViewChildren
+} from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ECommandType, ICommandItem } from 'src/app/shared/models/commands.model';
 
 @Component({
@@ -7,7 +16,8 @@ import { ECommandType, ICommandItem } from 'src/app/shared/models/commands.model
   styleUrls: ['./terminal.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TerminalComponent {
+export class TerminalComponent implements AfterViewInit, OnDestroy {
+  @ViewChildren('commandInputs') commandInputs!: QueryList<ElementRef>;
   commandItems: ICommandItem[] = [
     {
       id: 0,
@@ -22,6 +32,13 @@ export class TerminalComponent {
       exists: true
     }
   ];
+  autoFocusSubscription!: Subscription;
+
+  ngAfterViewInit(): void {
+    this.commandInputs.changes.subscribe(() => {
+      if (this.commandInputs.length) this.commandInputs.last.nativeElement.focus();
+    });
+  }
 
   executeCommand(commandItem: ICommandItem, event: KeyboardEvent): void {
     commandItem.disableInput = true;
@@ -38,5 +55,9 @@ export class TerminalComponent {
 
   checkIfCommandExists(command: ECommandType): boolean {
     return Object.values(ECommandType).includes(command);
+  }
+
+  ngOnDestroy(): void {
+    this.autoFocusSubscription?.unsubscribe();
   }
 }
