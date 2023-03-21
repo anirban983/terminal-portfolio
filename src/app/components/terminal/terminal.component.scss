@@ -1,16 +1,22 @@
 .terminal {
   padding: 1rem;
 
-  input {
-    color: var(--columbia-blue);
-    caret-color: var(--guppie-green);
-    background: transparent;
-    outline: none;
-    border: none;
+  .run-command {
+    display: flex;
 
-    &:focus {
-      border: none;
+    input {
+      margin-left: 0.5rem;
+      width: 100%;
+      color: var(--columbia-blue);
+      caret-color: var(--guppie-green);
+      background: transparent;
       outline: none;
+      border: none;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
     }
   }
 

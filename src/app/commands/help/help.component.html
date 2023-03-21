@@ -1,1 +1,8 @@
-<p>help works!</p>
+<table>
+  <tr *ngFor="let command of availableCommands">
+    <td class="text-guppie-green command-name">
+      {{ command.name }}
+    </td>
+    <td>&hyphen; {{ command.description }}</td>
+  </tr>
+</table>
