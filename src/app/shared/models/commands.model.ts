@@ -6,7 +6,21 @@ export interface ICommandItem {
 }
 
 export enum ECommandType {
+  ABOUT = 'about',
   EMPTY = '',
+  CLEAR = 'clear',
+  CERTIFICATES = 'certificates',
+  CV = 'cv',
+  EDUCATION = 'education',
+  EMAIL = 'email',
+  GUI = 'gui',
+  HELP = 'help',
+  HISTORY = 'history',
+  INTERESTS = 'interests',
+  PROJECTS = 'projects',
+  SOCIALS = 'socials',
+  SKILLS = 'skills',
+  THEMES = 'themes',
   WELCOME = 'welcome',
-  HELP = 'help'
+  WORK = 'wrok'
 }
