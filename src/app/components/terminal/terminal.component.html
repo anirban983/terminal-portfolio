@@ -1,6 +1,6 @@
 <div class="terminal">
   <ng-container *ngFor="let commandItem of commandItems">
-    <div class="run-command">
+    <div class="command-input-div">
       <span class="text-bright-pink">visitor</span>@<span class="text-guppie-green">terminal.anirbankar.dev</span>:~$
       <input
         autofocus
@@ -20,8 +20,8 @@
       />
     </div>
 
-    <ng-container *ngIf="commandItem.entered">
-      <div *ngIf="commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">
+    <div [class.d-none]="!commandItem.entered">
+      <div *ngIf="commandItem.exists" [ngSwitch]="commandItem.command">
         <app-about *ngSwitchCase="'about'"></app-about>
         <app-education *ngSwitchCase="'education'"></app-education>
         <app-welcome *ngSwitchCase="'welcome'"></app-welcome>
@@ -29,9 +29,9 @@
         <app-interests *ngSwitchCase="'interests'"></app-interests>
       </div>
 
-      <div *ngIf="!commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">
+      <div *ngIf="!commandItem.exists">
         <app-not-found [command]="commandItem.command"></app-not-found>
       </div>
-    </ng-container>
+    </div>
   </ng-container>
 </div>

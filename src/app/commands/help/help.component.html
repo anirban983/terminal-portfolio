@@ -1,17 +1,19 @@
-<table>
-  <tr *ngFor="let command of availableCommands">
-    <td class="text-guppie-green command-name">
-      {{ command.name }}
-    </td>
-    <td>&hyphen; {{ command.description }}</td>
-  </tr>
-</table>
+<div class="my-1 mb-2">
+  <table>
+    <tr *ngFor="let command of availableCommands">
+      <td class="text-guppie-green command-name">
+        {{ command.name }}
+      </td>
+      <td>&hyphen; {{ command.description }}</td>
+    </tr>
+  </table>
 
-<table class="control-table">
-  <tr *ngFor="let control of availableControls">
-    <td class="control-name">
-      {{ control.name }}
-    </td>
-    <td>=> {{ control.description }}</td>
-  </tr>
-</table>
+  <table class="control-table">
+    <tr *ngFor="let control of availableControls">
+      <td class="control-name">
+        {{ control.name }}
+      </td>
+      <td>=> {{ control.description }}</td>
+    </tr>
+  </table>
+</div>
