@@ -8,11 +8,13 @@ import { AboutModule } from '../../commands/about/about.module';
 import { CertificatesModule } from '../../commands/certificates/certificates.module';
 import { EducationModule } from '../../commands/education/education.module';
 import { InterestsModule } from '../../commands/interests/interests.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TerminalComponent],
   imports: [
     CommonModule,
+    FormsModule,
     WelcomeModule,
     HelpModule,
     NotFoundModule,

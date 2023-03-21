@@ -8,6 +8,7 @@ import {
   ViewChildren
 } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { availableCommands } from 'src/app/shared/data/commands.data';
 import { ECommandType, ICommandItem } from 'src/app/shared/models/commands.model';
 
 @Component({
@@ -35,23 +36,57 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
     }
   ];
   currentCommandId = 1;
+  hints: ECommandType[] = [];
+  currentHintIndex = 0;
   autoFocusSubscription!: Subscription;
 
   ngAfterViewInit(): void {
-    this.commandInputs.changes.subscribe(() => {
+    this.autoFocusSubscription = this.commandInputs.changes.subscribe(() => {
       if (this.commandInputs.length) this.commandInputs.last.nativeElement.focus();
     });
   }
 
-  executeCommand(commandItem: ICommandItem, event: KeyboardEvent): void {
-    const value = (event.target as HTMLInputElement).value as ECommandType;
+  getHints(id: number) {
+    this.currentHintIndex = 0;
+    const commandItem = this.findCommandItemById(id);
+    if (!commandItem) {
+      return;
+    }
 
-    if (value === ECommandType.CLEAR) {
+    if (commandItem.command === '') {
+      return;
+    }
+
+    this.hints = availableCommands
+      .filter((command) => command.name.startsWith(commandItem.command))
+      .map((command) => command.name as ECommandType);
+  }
+
+  autoComplete(id: number) {
+    if (this.currentHintIndex >= this.hints.length) {
+      return;
+    }
+
+    const commandItem = this.findCommandItemById(id);
+    if (!commandItem) {
+      return;
+    }
+
+    commandItem.command = this.hints[this.currentHintIndex];
+    this.currentHintIndex += 1;
+  }
+
+  executeCommand(id: number): void {
+    const commandItem = this.findCommandItemById(id);
+    if (!commandItem) {
+      return;
+    }
+
+    if (commandItem.command === ECommandType.CLEAR) {
       this.clearTerminal();
     } else {
       commandItem.disabled = true;
       commandItem.entered = true;
-      commandItem.command = value;
       commandItem.exists = this.checkIfCommandExists(commandItem.command);
       this.currentCommandId = this.commandItems.length;
 
@@ -63,6 +98,10 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
         entered: false
       });
     }
+  }
+
+  findCommandItemById(id: number): ICommandItem | undefined {
+    return this.commandItems.find((item) => item.id === id);
   }
 
   checkIfCommandExists(command: ECommandType): boolean {
