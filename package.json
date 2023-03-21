@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prepare": "husky install",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
+    "build:prod": "ng build --deploy-url /terminal-portfolio/"
   },
   "private": true,
   "dependencies": {
