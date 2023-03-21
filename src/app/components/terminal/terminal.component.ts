@@ -21,17 +21,20 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
   commandItems: ICommandItem[] = [
     {
       id: 0,
-      disableInput: true,
+      disabled: true,
       command: ECommandType.WELCOME,
-      exists: true
+      exists: true,
+      entered: true
     },
     {
       id: 1,
-      disableInput: false,
+      disabled: false,
       command: ECommandType.EMPTY,
-      exists: true
+      exists: true,
+      entered: false
     }
   ];
+  currentCommandId = 1;
   autoFocusSubscription!: Subscription;
 
   ngAfterViewInit(): void {
@@ -44,30 +47,63 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
     const value = (event.target as HTMLInputElement).value as ECommandType;
 
     if (value === ECommandType.CLEAR) {
-      this.commandItems = [
-        {
-          id: 0,
-          disableInput: false,
-          command: ECommandType.EMPTY,
-          exists: true
-        }
-      ];
+      this.clearTerminal();
     } else {
-      commandItem.disableInput = true;
+      commandItem.disabled = true;
+      commandItem.entered = true;
       commandItem.command = value;
       commandItem.exists = this.checkIfCommandExists(commandItem.command);
+      this.currentCommandId = this.commandItems.length;
 
       this.commandItems.push({
-        id: this.commandItems.length,
-        disableInput: false,
+        id: this.currentCommandId,
+        disabled: false,
         command: ECommandType.EMPTY,
-        exists: true
+        exists: true,
+        entered: false
       });
     }
   }
 
   checkIfCommandExists(command: ECommandType): boolean {
     return Object.values(ECommandType).includes(command);
+  }
+
+  goToPreviousStep() {
+    if (this.currentCommandId > 0) {
+      this.currentCommandId -= 1;
+      this.getLastCommand().command = this.commandItems[this.currentCommandId].command;
+    }
+  }
+
+  goToNextStep() {
+    if (this.currentCommandId < this.commandItems.length - 1) {
+      this.currentCommandId += 1;
+      this.getLastCommand().command =
+        this.currentCommandId == this.commandItems.length - 1
+          ? ECommandType.EMPTY
+          : this.commandItems[this.currentCommandId].command;
+    }
+  }
+
+  getLastCommand() {
+    return this.commandItems[this.commandItems.length - 1];
+  }
+
+  focusOnInputField() {
+    this.commandInputs.last.nativeElement.focus();
+  }
+
+  clearTerminal() {
+    this.commandItems = [
+      {
+        id: 0,
+        disabled: false,
+        command: ECommandType.EMPTY,
+        exists: true,
+        entered: false
+      }
+    ];
   }
 
   ngOnDestroy(): void {

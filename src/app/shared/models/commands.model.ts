@@ -1,7 +1,8 @@
 export interface ICommandItem {
   id: number;
-  disableInput: boolean;
+  disabled: boolean;
   command: ECommandType;
+  entered: boolean;
   exists: boolean;
 }
 

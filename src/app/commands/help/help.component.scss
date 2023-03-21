@@ -1,5 +1,10 @@
 table {
-  .command-name {
-    padding-right: 3rem;
+  .command-name,
+  .control-name {
+    width: 150px;
   }
+}
+
+table.control-table {
+  margin-top: 1rem;
 }

@@ -6,3 +6,12 @@
     <td>&hyphen; {{ command.description }}</td>
   </tr>
 </table>
+
+<table class="control-table">
+  <tr *ngFor="let control of availableControls">
+    <td class="control-name">
+      {{ control.name }}
+    </td>
+    <td>=> {{ control.description }}</td>
+  </tr>
+</table>
