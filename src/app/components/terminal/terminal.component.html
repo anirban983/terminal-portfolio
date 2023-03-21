@@ -1,6 +1,14 @@
 <div class="terminal">
   <ng-container *ngFor="let commandItem of commandItems">
-    <app-run-command [commandItem]="commandItem" (executeCommand)="executeCommand($event)"> </app-run-command>
+    <div>
+      <span class="text-bright-pink">visitor</span>@<span class="text-guppie-green">terminal.anirbankar.dev</span>:~$
+      <input
+        class="font-family-monospace"
+        [value]="commandItem.command"
+        [disabled]="commandItem.disableInput"
+        (keyup.enter)="executeCommand(commandItem, $any($event))"
+      />
+    </div>
 
     <div *ngIf="commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">
       <app-welcome *ngSwitchCase="'welcome'"></app-welcome>

@@ -1,6 +1,19 @@
 .terminal {
   padding: 1rem;
 
+  input {
+    color: var(--columbia-blue);
+    caret-color: var(--guppie-green);
+    background: transparent;
+    outline: none;
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
   .show-output {
     margin: 0.5rem 0 1rem 0;
   }
