@@ -1,0 +1,49 @@
+.welcome {
+  p {
+    margin: 0.1rem 0;
+  }
+
+  .pre-formatted-name {
+    display: flex;
+
+    pre:nth-child(2) {
+      margin-left: 2rem;
+    }
+  }
+
+  a.underline-hover-effect {
+    text-decoration: none;
+    color: var(--bright-pink);
+  }
+
+  .underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+  }
+
+  .underline-hover-effect::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--bright-pink);
+    transition: width 0.25s ease-out;
+  }
+  .underline-hover-effect:hover::before {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .pre-formatted-name {
+    flex-direction: column;
+
+    pre:nth-child(2) {
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @import 'styles/_variables.scss';
 
 html {
-  line-height: 1.15;
+  line-height: 1.5;
 }
 
 body {
@@ -29,4 +29,17 @@ body {
 
 .text-guppie-green {
   color: var(--guppie-green);
+}
+
+.text-blaze-orange {
+  color: var(--blaze-orange);
+}
+
+b {
+  @extend .text-blaze-orange;
+}
+
+ol {
+  margin-block-end: 0;
+  padding-inline-start: 1.75rem;
 }

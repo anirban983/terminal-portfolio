@@ -13,8 +13,11 @@
     </div>
 
     <div *ngIf="commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">
+      <app-about *ngSwitchCase="'about'"></app-about>
+      <app-education *ngSwitchCase="'education'"></app-education>
       <app-welcome *ngSwitchCase="'welcome'"></app-welcome>
       <app-help *ngSwitchCase="'help'"></app-help>
+      <app-interests *ngSwitchCase="'interests'"></app-interests>
     </div>
 
     <div *ngIf="!commandItem.exists" class="show-output" [ngSwitch]="commandItem.command">

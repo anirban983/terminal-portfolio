@@ -15,7 +15,6 @@ export enum ECommandType {
   EMAIL = 'email',
   GUI = 'gui',
   HELP = 'help',
-  HISTORY = 'history',
   INTERESTS = 'interests',
   PROJECTS = 'projects',
   SOCIALS = 'socials',

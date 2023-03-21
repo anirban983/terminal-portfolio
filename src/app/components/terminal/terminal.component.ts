@@ -41,16 +41,29 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
   }
 
   executeCommand(commandItem: ICommandItem, event: KeyboardEvent): void {
-    commandItem.disableInput = true;
-    commandItem.command = (event.target as HTMLInputElement).value as ECommandType;
-    commandItem.exists = this.checkIfCommandExists(commandItem.command);
+    const value = (event.target as HTMLInputElement).value as ECommandType;
 
-    this.commandItems.push({
-      id: this.commandItems.length,
-      disableInput: false,
-      command: ECommandType.EMPTY,
-      exists: true
-    });
+    if (value === ECommandType.CLEAR) {
+      this.commandItems = [
+        {
+          id: 0,
+          disableInput: false,
+          command: ECommandType.EMPTY,
+          exists: true
+        }
+      ];
+    } else {
+      commandItem.disableInput = true;
+      commandItem.command = value;
+      commandItem.exists = this.checkIfCommandExists(commandItem.command);
+
+      this.commandItems.push({
+        id: this.commandItems.length,
+        disableInput: false,
+        command: ECommandType.EMPTY,
+        exists: true
+      });
+    }
   }
 
   checkIfCommandExists(command: ECommandType): boolean {
