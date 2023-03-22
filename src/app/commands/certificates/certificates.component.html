@@ -1,63 +1,9 @@
 <div class="certifcates my-2">
   Here are my certifications from the last few years!
   <ol>
-    <li>
-      <a
-        target="_blank"
-        class="underline-hover-effect"
-        href="https://1drv.ms/b/s!AkD34JHCNHdBg6croRjMpQrCrnHxjQ?e=mVcmaf"
-      >
-        The Complete Node.js Developer Course
-      </a>
-    </li>
-
-    <li>
-      <a
-        target="_blank"
-        class="underline-hover-effect"
-        href="https://1drv.ms/b/s!AkD34JHCNHdBg5dRKnQ0CZizugSBTg?e=toTtFT"
-      >
-        Deep Learning with Advanced NLP
-      </a>
-    </li>
-
-    <li>
-      <a
-        target="_blank"
-        class="underline-hover-effect"
-        href="https://1drv.ms/b/s!AkD34JHCNHdBg5dP-c8x1EgvXWHosw?e=0E7des"
-      >
-        NLP with Classification and Vector Spaces
-      </a>
-    </li>
-
-    <li>
-      <a
-        target="_blank"
-        class="underline-hover-effect"
-        href="https://1drv.ms/b/s!AkD34JHCNHdBg5dOwxpw-0jqlD_kDQ?e=TyyhiX"
-      >
-        NLP with Probabilistic Models
-      </a>
-    </li>
-
-    <li>
-      <a
-        target="_blank"
-        class="underline-hover-effect"
-        href="https://1drv.ms/b/s!AkD34JHCNHdBg5dQrnZ19sxVi1j40g?e=LFxDZ8"
-      >
-        NLP with Sequence Models
-      </a>
-    </li>
-
-    <li>
-      <a
-        target="_blank"
-        class="underline-hover-effect"
-        href="https://1drv.ms/b/s!AkD34JHCNHdBg410jQmJZ0-NC3ptyA?e=31drwv"
-      >
-        Rajasthan Hackathon
+    <li *ngFor="let certificate of certificates">
+      <a target="_blank" class="underline-hover-effect" [href]="certificate.link">
+        {{ certificate.name }}
       </a>
     </li>
   </ol>

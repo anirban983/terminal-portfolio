@@ -78,3 +78,29 @@ export const workEx = [
     ]
   }
 ];
+export const certificates = [
+  {
+    name: 'The Complete Node.js Developer Course',
+    link: 'https://1drv.ms/b/s!AkD34JHCNHdBg6croRjMpQrCrnHxjQ?e=mVcmaf'
+  },
+  {
+    name: 'Deep Learning with Advanced NLP',
+    link: 'https://1drv.ms/b/s!AkD34JHCNHdBg5dRKnQ0CZizugSBTg?e=toTtFT'
+  },
+  {
+    name: 'NLP with Classification and Vector Spaces',
+    link: 'https://1drv.ms/b/s!AkD34JHCNHdBg5dP-c8x1EgvXWHosw?e=0E7des'
+  },
+  {
+    name: 'NLP with Probabilistic Models',
+    link: 'https://1drv.ms/b/s!AkD34JHCNHdBg5dOwxpw-0jqlD_kDQ?e=TyyhiX'
+  },
+  {
+    name: 'NLP with Sequence Models',
+    link: 'https://1drv.ms/b/s!AkD34JHCNHdBg5dQrnZ19sxVi1j40g?e=LFxDZ8'
+  },
+  {
+    name: 'Rajasthan Hackathon',
+    link: 'https://1drv.ms/b/s!AkD34JHCNHdBg410jQmJZ0-NC3ptyA?e=31drwv'
+  }
+];
