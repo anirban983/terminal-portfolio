@@ -8,3 +8,27 @@ table {
 table.control-table {
   margin-top: 1rem;
 }
+
+@media only screen and (max-width: 575px) {
+  .sm-screen {
+    display: block;
+
+    .desc-data {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .bg-screen {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .sm-screen {
+    display: none;
+  }
+
+  .bg-screen {
+    display: block;
+  }
+}

@@ -39,6 +39,18 @@ body {
   display: none;
 }
 
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.w-100 {
+  width: 100%;
+}
+
 b {
   @extend .text-blaze-orange;
 }
@@ -66,4 +78,30 @@ ol {
 
 .mb-2 {
   margin-bottom: 1rem;
+}
+
+a.underline-hover-effect {
+  text-decoration: none;
+  color: var(--bright-pink);
+}
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--bright-pink);
+  transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect:hover::before {
+  width: 100%;
 }

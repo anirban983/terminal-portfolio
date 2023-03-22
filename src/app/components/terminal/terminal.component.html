@@ -1,23 +1,27 @@
 <div class="terminal">
   <ng-container *ngFor="let commandItem of commandItems">
-    <div class="command-input-div">
-      <span class="text-bright-pink">visitor</span>@<span class="text-guppie-green">terminal.anirbankar.dev</span>:~$
-      <input
-        autofocus
-        #commandInputs
-        class="font-family-monospace"
-        [(ngModel)]="commandItem.command"
-        [disabled]="commandItem.disabled"
-        (blur)="focusOnInputField()"
-        (input)="getHints(commandItem.id)"
-        (keydown.enter)="executeCommand(commandItem.id)"
-        (keydown.arrowdown)="$event.preventDefault(); goToNextStep()"
-        (keydown.arrowup)="$event.preventDefault(); goToPreviousStep()"
-        (keydown.control.l)="$event.preventDefault(); clearTerminal()"
-        (keydown.control.l)="$event.preventDefault(); clearTerminal()"
-        (keydown.tab)="$event.preventDefault(); autoComplete(commandItem.id)"
-        (keydown.control.i)="$event.preventDefault(); autoComplete(commandItem.id)"
-      />
+    <div class="run-command d-flex">
+      <div>
+        <span class="text-bright-pink">visitor</span>@<span class="text-guppie-green">terminal.anirbankar.dev</span>:~$
+      </div>
+      <div class="d-flex w-100 command-input">
+        <span> > </span>
+        <input
+          autofocus
+          #commandInputs
+          class="font-family-monospace"
+          [(ngModel)]="commandItem.command"
+          [disabled]="commandItem.disabled"
+          (blur)="focusOnInputField()"
+          (input)="getHints(commandItem.id)"
+          (keydown.enter)="executeCommand(commandItem.id)"
+          (keydown.arrowdown)="$event.preventDefault(); goToNextStep()"
+          (keydown.arrowup)="$event.preventDefault(); goToPreviousStep()"
+          (keydown.control.l)="$event.preventDefault(); clearTerminal()"
+          (keydown.tab)="$event.preventDefault(); autoComplete(commandItem.id)"
+          (keydown.control.i)="$event.preventDefault(); autoComplete(commandItem.id)"
+        />
+      </div>
     </div>
 
     <div [class.d-none]="!commandItem.entered">

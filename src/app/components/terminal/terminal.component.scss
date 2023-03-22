@@ -1,9 +1,7 @@
 .terminal {
   padding: 1rem;
 
-  .command-input-div {
-    display: flex;
-
+  .run-command {
     input {
       margin-left: 0.5rem;
       width: 100%;
@@ -18,5 +16,21 @@
         outline: none;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .run-command {
+    flex-direction: column;
+  }
+
+  .command-input {
+    margin-top: 0.25rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .command-input span {
+    display: none;
   }
 }
