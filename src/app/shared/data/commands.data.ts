@@ -1,7 +1,7 @@
 export const availableCommands = [
   { name: 'about', description: 'about Anirban kar' },
-  { name: 'clear', description: 'clear terminal' },
   { name: 'certificates', description: 'my certifications' },
+  { name: 'clear', description: 'clear terminal' },
   { name: 'cv', description: 'download my curriculum vitae' },
   { name: 'education', description: 'my eudcation background' },
   { name: 'email', description: 'send an email to me' },
