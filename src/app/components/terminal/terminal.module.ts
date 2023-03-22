@@ -13,6 +13,7 @@ import { ProjectsModule } from '../../commands/projects/projects.module';
 import { SkillsModule } from '../../commands/skills/skills.module';
 import { WorkModule } from '../../commands/work/work.module';
 import { ThemesModule } from '../../commands/themes/themes.module';
+import { ChipModule } from '../chip/chip.module';
 
 @NgModule({
   declarations: [TerminalComponent],
@@ -29,7 +30,8 @@ import { ThemesModule } from '../../commands/themes/themes.module';
     ProjectsModule,
     SkillsModule,
     WorkModule,
-    ThemesModule
+    ThemesModule,
+    ChipModule
   ],
   exports: [TerminalComponent]
 })

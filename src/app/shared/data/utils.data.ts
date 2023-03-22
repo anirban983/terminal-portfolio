@@ -4,34 +4,49 @@ export const linkedInProfileURL = 'https://www.linkedin.com/in/anirban-kar-49802
 export const projects = [
   {
     name: 'Caller Sentiment Analysis',
+    date: '09/2020 - 08/2021',
     pointers: [
-      'A tool for auditing call centers that performs sentiment analysis.',
+      'A web-based tool that conducts sentiment analysis specifically designed for call centers.',
+      'Enables managers to evaluate the performance of calls and provide feedback to operational executives.',
       'Designed backend with Node.js, Express.js, Mongoose and frontend with Angular 10 from scratch.',
-      'Integrated Azure Active Directory Authentication with Angular.',
-      'Built Machine Learning pipeline with python.'
+      'Constructed a Machine Learning pipeline utilizing Python and IBM cloud services.'
+    ],
+    technologies: [
+      'Node.js',
+      'Angular 10',
+      'Express.js',
+      'MongoDB',
+      'Python',
+      'Natural Language Processing',
+      'Azure Active Directory Authentication'
     ]
   },
   {
     name: 'Intelligent Assistant',
+    date: '03/2020 - 09/2020',
     pointers: [
-      'Python Flask web application to audit and train ML models for ticketing tools to reduce SLA time.',
-      `Built the entire frontend and backend in Python from scratch, allowing businesses to upload data to train <br class="bg-screen">
-     ML models and configure the application with an existing ticketing tool to classify future ticket data.`
-    ]
+      `A web-based platform that reviews and instructs machine learning models for ticketing tools,
+      <br class="bg-screen"> aimed at decreasing SLA duration.`,
+      `Enterprises can upload data for training machine learning models and set up the application
+      <br class="bg-screen"> with an existing ticketing tool to categorize upcoming ticket data.`,
+      'Developed the complete frontend and backend from scratch using Python and fastapi.'
+    ],
+    technologies: ['Python', 'FastAPI', 'MongoDB', 'Natural Language Processing']
   },
   {
     name: 'Ticket Management System',
+    date: '08/2019 - 03/2020',
     pointers: [
-      ".NET Core application that lets businesses manage tickets for it's clients.",
+      'A client ticket management application for businesses.',
       'Developed multiple RESTful APIs along with few UI pages.'
-    ]
+    ],
+    technologies: ['.Net MVC', 'Dapper', 'MS SQL Server']
   },
   {
     name: 'Thrifty',
-    pointers: [
-      'A web application built with Angular and .NET Core.',
-      'Compares food and hotel prices from various websites.'
-    ]
+    date: '04/2019 - 05/2019',
+    pointers: ['A web-based platform that contrasts food and lodging rates across multiple websites.'],
+    technologies: ['.Net Core', 'Angular 6', 'MS SQL Server']
   }
 ];
 export const workEx = [
@@ -44,7 +59,7 @@ export const workEx = [
       `Used AWS Codebuild and GitHub Actions to create a CI/CD pipeline.`,
       `Developed a new wallet top-up flow in which users can top up their <br class="bg-screen"> multi-currency wallets using debit/credit cards.`,
       `Built a new feature that allows users to generate and share payment links <br class="bg-screen"> with auto-reminders to their own customers in 11 different currencies.`,
-      `Collaborated with other developers to create a multi- user solution that <br class="bg-screen"> allows businesses to onboard multiple clients as team members on our platform.`,
+      `Collaborated with other developers to create a multi&hyphen;user solution that <br class="bg-screen"> allows businesses to onboard multiple clients as team members on our platform.`,
       `Implementing user roles and permissions for administrators and clients in a scalable <br class="bg-screen"> and robust manner across the entire application.`
     ]
   },
@@ -55,7 +70,7 @@ export const workEx = [
     tasks: [
       `Built applications to classify emails and extract useful information using various <br class="bg-screen"> Machine Learning Algorithms and Deep Learning Techniques.`,
       `Built RESTful APIs on Node.js using Express with token based authentication that served data to our Angular Front-End.`,
-      `Worked alongside other developers to build an user- management web app from scratch using MEAN Stack.`
+      `Worked alongside other developers to build an user&hyphen;management web app from scratch using MEAN Stack.`
     ]
   },
   {
@@ -103,4 +118,21 @@ export const certificates = [
     name: 'Rajasthan Hackathon',
     link: 'https://1drv.ms/b/s!AkD34JHCNHdBg410jQmJZ0-NC3ptyA?e=31drwv'
   }
+];
+export const skills = [
+  'Node.js',
+  'Angular',
+  'AWS',
+  'Serverless',
+  'AWS Lambda',
+  'Express.js',
+  'Python',
+  'Flask',
+  'FastAPI',
+  'Sequelize',
+  'Mongoose',
+  'MySQL',
+  'MongoDB',
+  'Machine Learning',
+  'Natural Language Processing'
 ];

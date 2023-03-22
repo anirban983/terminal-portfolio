@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { skills } from 'src/app/shared/data/utils.data';
 
 @Component({
   selector: 'app-skills',
@@ -6,4 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./skills.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SkillsComponent {}
+export class SkillsComponent {
+  techincalSkills = skills;
+}

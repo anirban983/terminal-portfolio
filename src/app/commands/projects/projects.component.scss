@@ -1,8 +1,25 @@
-.projects ol > li {
-  margin-bottom: 0.5rem;
+.projects {
+  ol > li {
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding: 0.25rem 0;
+    padding-inline-start: 1rem;
+  }
+
+  .tech-wrapper {
+    width: 700px;
+
+    app-chip {
+      display: inline-block;
+      margin: 0.5rem 0.5rem 0 0;
+    }
+  }
 }
 
-.projects ul {
-  padding: 0.25rem 0;
-  padding-inline-start: 1rem;
+@media only screen and (max-width: 767px) {
+  .projects .tech-wrapper {
+    width: 100% !important;
+  }
 }
