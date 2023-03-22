@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { availableCommands } from 'src/app/shared/data/commands.data';
+import { cvURL, email, linkedInProfileURL } from 'src/app/shared/data/utils.data';
 import { ECommandType, ICommandItem } from 'src/app/shared/models/commands.model';
 
 @Component({
@@ -54,6 +55,7 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
     }
 
     if (commandItem.command === '') {
+      this.hints = [];
       return;
     }
 
@@ -84,20 +86,27 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
 
     if (commandItem.command === ECommandType.CLEAR) {
       this.clearTerminal();
-    } else {
-      commandItem.disabled = true;
-      commandItem.entered = true;
-      commandItem.exists = this.checkIfCommandExists(commandItem.command);
-      this.currentCommandId = this.commandItems.length;
-
-      this.commandItems.push({
-        id: this.currentCommandId,
-        disabled: false,
-        command: ECommandType.EMPTY,
-        exists: true,
-        entered: false
-      });
+      return;
+    } else if (commandItem.command === ECommandType.CV) {
+      this.downloadCV();
+    } else if (commandItem.command === ECommandType.EMAIL) {
+      this.mailMe();
+    } else if (commandItem.command === ECommandType.LINKEDIN) {
+      this.goToLinkedin();
     }
+
+    commandItem.disabled = true;
+    commandItem.entered = true;
+    commandItem.exists = this.checkIfCommandExists(commandItem.command);
+    this.currentCommandId = this.commandItems.length;
+
+    this.commandItems.push({
+      id: this.currentCommandId,
+      disabled: false,
+      command: ECommandType.EMPTY,
+      exists: true,
+      entered: false
+    });
   }
 
   findCommandItemById(id: number): ICommandItem | undefined {
@@ -143,6 +152,19 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
         entered: false
       }
     ];
+  }
+
+  downloadCV() {
+    window.open(cvURL, '_blank');
+  }
+
+  mailMe() {
+    const mailText = `mailto:${email}`;
+    window.location.href = mailText;
+  }
+
+  goToLinkedin() {
+    window.open(linkedInProfileURL, '_blank');
   }
 
   ngOnDestroy(): void {

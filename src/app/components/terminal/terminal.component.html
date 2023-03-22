@@ -27,10 +27,17 @@
     <div [class.d-none]="!commandItem.entered">
       <div *ngIf="commandItem.exists" [ngSwitch]="commandItem.command">
         <app-about *ngSwitchCase="'about'"></app-about>
+        <app-certificates *ngSwitchCase="'certificates'"></app-certificates>
         <app-education *ngSwitchCase="'education'"></app-education>
-        <app-welcome *ngSwitchCase="'welcome'"></app-welcome>
         <app-help *ngSwitchCase="'help'"></app-help>
         <app-interests *ngSwitchCase="'interests'"></app-interests>
+        <app-projects *ngSwitchCase="'projects'"></app-projects>
+        <app-skills *ngSwitchCase="'skills'"></app-skills>
+        <app-themes *ngSwitchCase="'themes'"></app-themes>
+        <app-welcome *ngSwitchCase="'welcome'"></app-welcome>
+        <app-work *ngSwitchCase="'work'"></app-work>
+
+        <div class="my-2" *ngSwitchCase="'gui'">Portfolio website is under development... Coming soon!</div>
       </div>
 
       <div *ngIf="!commandItem.exists">

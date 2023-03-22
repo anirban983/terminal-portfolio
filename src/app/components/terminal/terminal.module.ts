@@ -9,6 +9,10 @@ import { CertificatesModule } from '../../commands/certificates/certificates.mod
 import { EducationModule } from '../../commands/education/education.module';
 import { InterestsModule } from '../../commands/interests/interests.module';
 import { FormsModule } from '@angular/forms';
+import { ProjectsModule } from '../../commands/projects/projects.module';
+import { SkillsModule } from '../../commands/skills/skills.module';
+import { WorkModule } from '../../commands/work/work.module';
+import { ThemesModule } from '../../commands/themes/themes.module';
 
 @NgModule({
   declarations: [TerminalComponent],
@@ -21,7 +25,11 @@ import { FormsModule } from '@angular/forms';
     AboutModule,
     CertificatesModule,
     EducationModule,
-    InterestsModule
+    InterestsModule,
+    ProjectsModule,
+    SkillsModule,
+    WorkModule,
+    ThemesModule
   ],
   exports: [TerminalComponent]
 })

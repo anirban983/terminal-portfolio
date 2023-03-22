@@ -1,0 +1,13 @@
+<div class="projects my-2">
+  Still curating... Most of them are offline or confidential. <br class="bg-screen" />
+  But here are some specifics regarding a few of my previous undertakings.
+
+  <ol>
+    <li *ngFor="let project of projects">
+      <b> {{ project.name }} </b>
+      <ul>
+        <li *ngFor="let pointer of project.pointers" [innerHTML]="pointer"></li>
+      </ul>
+    </li>
+  </ol>
+</div>

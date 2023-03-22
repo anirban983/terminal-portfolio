@@ -60,24 +60,21 @@ ol {
   padding-inline-start: 1.75rem;
 }
 
+ul {
+  margin-block-end: 0;
+  padding-inline-start: 1rem;
+}
+
 .my-1 {
   margin: 0.5rem 0;
 }
 
-.mt-1 {
-  margin-top: 0.5rem;
+.my-2 {
+  margin: 1rem 0;
 }
 
 .mb-1 {
   margin-bottom: 0.5rem;
-}
-
-.mt-2 {
-  margin-top: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 1rem;
 }
 
 a.underline-hover-effect {
@@ -104,4 +101,18 @@ a.underline-hover-effect {
 
 .underline-hover-effect:hover::before {
   width: 100%;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1023px) {
+  br.bg-screen {
+    display: none;
+  }
 }

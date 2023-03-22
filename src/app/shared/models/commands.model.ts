@@ -17,10 +17,10 @@ export enum ECommandType {
   GUI = 'gui',
   HELP = 'help',
   INTERESTS = 'interests',
+  LINKEDIN = 'linkedin',
   PROJECTS = 'projects',
-  SOCIALS = 'socials',
   SKILLS = 'skills',
   THEMES = 'themes',
   WELCOME = 'welcome',
-  WORK = 'wrok'
+  WORK = 'work'
 }
