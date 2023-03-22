@@ -1,6 +1,4 @@
 name: CI / CD for Terminal Portfolio
-on:
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
