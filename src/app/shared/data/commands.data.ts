@@ -8,7 +8,7 @@ export const availableCommands = [
   { name: 'gui', description: 'go to my portfolio in GUI' },
   { name: 'help', description: 'check available commands' },
   { name: 'interests', description: 'my interests and hobbies' },
-  { name: 'linkedin', description: 'go to my linked in profile' },
+  { name: 'linkedin', description: 'go to my linkedin profile' },
   { name: 'projects', description: 'my personal projects' },
   { name: 'skills', description: 'my technical skills' },
   { name: 'themes', description: 'check available themes' },
