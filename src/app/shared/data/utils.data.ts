@@ -9,7 +9,7 @@ export const projects = [
       'A web-based tool that conducts sentiment analysis specifically designed for call centers.',
       'Enables managers to evaluate the performance of calls and provide feedback to operational executives.',
       'Designed backend with Node.js, Express.js, Mongoose and frontend with Angular 10 from scratch.',
-      'Constructed a Machine Learning pipeline utilizing Python and IBM cloud services.'
+      'Constructed a Machine Learning pipeline utilizing Python and IBM Watson NLU.'
     ],
     technologies: [
       'Node.js',
@@ -18,7 +18,8 @@ export const projects = [
       'MongoDB',
       'Python',
       'Natural Language Processing',
-      'Azure Active Directory Authentication'
+      'Azure Active Directory Authentication',
+      'IBM Watson NLU'
     ]
   },
   {
