@@ -1,5 +1,7 @@
 name: CI / CD for Terminal Portfolio
 
+on:
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
