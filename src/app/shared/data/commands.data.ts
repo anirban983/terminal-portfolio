@@ -3,7 +3,7 @@ export const availableCommands = [
   { name: 'certificates', description: 'my certifications' },
   { name: 'clear', description: 'clear terminal' },
   { name: 'cv', description: 'download my curriculum vitae' },
-  { name: 'education', description: 'my eudcation background' },
+  { name: 'education', description: 'my education background' },
   { name: 'email', description: 'send an email to me' },
   { name: 'gui', description: 'go to my portfolio in GUI' },
   { name: 'help', description: 'check available commands' },
