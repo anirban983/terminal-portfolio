@@ -1,10 +1,11 @@
 .terminal {
   padding: 1rem;
 
-  .run-command {
+  .terminal-input-form {
     input {
       margin-left: 0.5rem;
       width: 100%;
+      max-width: 100%;
       color: var(--columbia-blue);
       caret-color: var(--guppie-green);
       background: transparent;
@@ -20,17 +21,23 @@
 }
 
 @media only screen and (max-width: 575px) {
-  .run-command {
-    flex-direction: column;
-  }
+  .terminal-input-form {
+    display: block;
 
-  .command-input {
-    margin-top: 0.25rem;
+    input {
+      margin-top: 0.25rem;
+      margin-left: 0.25rem !important;
+      width: 85% !important;
+    }
   }
 }
 
 @media only screen and (min-width: 576px) {
-  .command-input span {
+  .terminal-input-form {
+    display: flex;
+  }
+
+  .terminal-input-br {
     display: none;
   }
 }
