@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  HostListener,
   OnDestroy,
   QueryList,
   ViewChildren
@@ -40,6 +41,27 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
   hints: ECommandType[] = [];
   currentHintIndex = 0;
   autoFocusSubscription!: Subscription;
+
+  @HostListener('document:keydown.arrowdown', ['$event'])
+  onArrowDown(event: KeyboardEvent) {
+    event.preventDefault();
+    this.focusOnInputField();
+    this.goToNextStep();
+  }
+
+  @HostListener('document:keydown.arrowup', ['$event'])
+  onArrowUp(event: KeyboardEvent) {
+    event.preventDefault();
+    this.focusOnInputField();
+    this.goToPreviousStep();
+  }
+
+  @HostListener('document:keydown.control.l', ['$event'])
+  onControlL(event: KeyboardEvent) {
+    event.preventDefault();
+    this.focusOnInputField();
+    this.clearTerminal();
+  }
 
   ngAfterViewInit(): void {
     this.autoFocusSubscription = this.commandInputs.changes.subscribe(() => {

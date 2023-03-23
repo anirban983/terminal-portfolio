@@ -19,12 +19,8 @@
         [ngModelOptions]="{ standalone: true }"
         [(ngModel)]="commandItem.command"
         [disabled]="commandItem.disabled"
-        (blur)="focusOnInputField()"
         (input)="getHints(commandItem.id)"
         (keydown.enter)="executeCommand(commandItem.id)"
-        (keydown.arrowdown)="$event.preventDefault(); goToNextStep()"
-        (keydown.arrowup)="$event.preventDefault(); goToPreviousStep()"
-        (keydown.control.l)="$event.preventDefault(); clearTerminal()"
         (keydown.tab)="$event.preventDefault(); autoComplete(commandItem.id)"
         (keydown.control.i)="$event.preventDefault(); autoComplete(commandItem.id)"
       />
