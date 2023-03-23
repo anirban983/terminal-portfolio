@@ -1,3 +1,5 @@
+import { ECommandType } from '../models/commands.model';
+
 export const email = 'anirbankar983@gmail.com';
 export const cvURL = 'https://1drv.ms/b/s!AkD34JHCNHdBg6csbgpvmbTLz81IUA?e=oOxFkn';
 export const linkedInProfileURL = 'https://www.linkedin.com/in/anirban-kar-498027130/';
@@ -137,3 +139,4 @@ export const skills = [
   'Machine Learning',
   'Natural Language Processing'
 ];
+export const availableThemes = ['dark', 'light'];

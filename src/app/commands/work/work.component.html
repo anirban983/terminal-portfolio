@@ -2,7 +2,7 @@
   <ol>
     <li *ngFor="let work of workExperience">
       <b> {{ work.position }} </b> <br />
-      <b class="text-columbia-blue mb-1"> {{ work.company }} </b> <span class="f-14"> ({{ work.date }}) </span>
+      <b class="hightlight-secondary mb-1"> {{ work.company }} </b> <span class="f-14"> ({{ work.date }}) </span>
       <ul>
         <li *ngFor="let task of work.tasks" [innerHTML]="task"></li>
       </ul>

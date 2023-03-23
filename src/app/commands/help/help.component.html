@@ -2,7 +2,7 @@
   <div class="bg-screen">
     <table>
       <tr *ngFor="let command of availableCommands">
-        <td class="text-guppie-green command-name">
+        <td class="terminal-label command-name">
           {{ command.name }}
         </td>
         <td>&hyphen; {{ command.description }}</td>
@@ -22,7 +22,7 @@
   <div class="sm-screen">
     <table>
       <ng-container *ngFor="let command of availableCommands">
-        <tr class="text-guppie-green command-name">
+        <tr class="terminal-label command-name">
           <td>
             {{ command.name }}
           </td>

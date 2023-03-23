@@ -9,7 +9,7 @@ import {
   ViewChildren
 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { availableCommands } from 'src/app/shared/data/commands.data';
+import { availableCommands, parentCommands } from 'src/app/shared/data/commands.data';
 import { cvURL, email, linkedInProfileURL } from 'src/app/shared/data/utils.data';
 import { ECommandType, ICommandItem } from 'src/app/shared/models/commands.model';
 
@@ -106,20 +106,21 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
-    if (commandItem.command === ECommandType.CLEAR) {
+    const givenCommand = commandItem.command;
+    if (givenCommand === ECommandType.CLEAR) {
       this.clearTerminal();
       return;
-    } else if (commandItem.command === ECommandType.CV) {
+    } else if (givenCommand === ECommandType.CV) {
       this.downloadCV();
-    } else if (commandItem.command === ECommandType.EMAIL) {
+    } else if (givenCommand === ECommandType.EMAIL) {
       this.mailMe();
-    } else if (commandItem.command === ECommandType.LINKEDIN) {
+    } else if (givenCommand === ECommandType.LINKEDIN) {
       this.goToLinkedin();
     }
 
     commandItem.disabled = true;
     commandItem.entered = true;
-    commandItem.exists = this.checkIfCommandExists(commandItem.command);
+    commandItem.exists = this.checkIfCommandExists(givenCommand);
     this.currentCommandId = this.commandItems.length;
 
     this.commandItems.push({
@@ -136,6 +137,9 @@ export class TerminalComponent implements AfterViewInit, OnDestroy {
   }
 
   checkIfCommandExists(command: ECommandType): boolean {
+    for (const parentCommand of parentCommands) {
+      if (command.startsWith(parentCommand)) return true;
+    }
     return Object.values(ECommandType).includes(command);
   }
 

@@ -1,0 +1,42 @@
+body {
+  background-color: var(--dark-blue);
+  color: var(--columbia-blue);
+}
+
+.title-bar {
+  background-color: var(--light-gray);
+}
+
+input {
+  color: var(--columbia-blue);
+  caret-color: var(--guppie-green);
+}
+
+.link {
+  color: var(--bright-pink);
+}
+
+.terminal-label {
+  color: var(--guppie-green);
+}
+
+a.underline-hover-effect {
+  color: var(--bright-pink);
+}
+
+.underline-hover-effect::before {
+  background-color: var(--bright-pink);
+}
+
+b {
+  color: var(--blaze-orange);
+}
+
+.hightlight-secondary {
+  color: var(--columbia-blue);
+}
+
+.chip {
+  background-color: var(--columbia-blue);
+  color: var(--charcoal);
+}

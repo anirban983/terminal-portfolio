@@ -2,7 +2,7 @@
   <ng-container *ngFor="let commandItem of commandItems">
     <form class="terminal-input-form">
       <label for="terminal-input">
-        <span class="text-bright-pink">visitor</span>@<span class="text-guppie-green">terminal.anirbankar.dev</span>:~$
+        <span class="link">visitor</span>@<span class="terminal-label">terminal.anirbankar.dev</span>:~$
         <span class="terminal-input-br">
           <br />
           <span> > </span>
@@ -26,20 +26,22 @@
       />
     </form>
 
-    <div [class.d-none]="!commandItem.entered">
-      <div *ngIf="commandItem.exists" [ngSwitch]="commandItem.command">
-        <app-about *ngSwitchCase="'about'"></app-about>
-        <app-certificates *ngSwitchCase="'certificates'"></app-certificates>
-        <app-education *ngSwitchCase="'education'"></app-education>
-        <app-help *ngSwitchCase="'help'"></app-help>
-        <app-interests *ngSwitchCase="'interests'"></app-interests>
-        <app-projects *ngSwitchCase="'projects'"></app-projects>
-        <app-skills *ngSwitchCase="'skills'"></app-skills>
-        <app-themes *ngSwitchCase="'themes'"></app-themes>
-        <app-welcome *ngSwitchCase="'welcome'"></app-welcome>
-        <app-work *ngSwitchCase="'work'"></app-work>
+    <div *ngIf="commandItem.entered">
+      <div *ngIf="commandItem.exists">
+        <app-about *ngIf="commandItem.command === 'about'"></app-about>
+        <app-certificates *ngIf="commandItem.command === 'certificates'"></app-certificates>
+        <app-education *ngIf="commandItem.command === 'education'"></app-education>
+        <app-help *ngIf="commandItem.command === 'help'"></app-help>
+        <app-interests *ngIf="commandItem.command === 'interests'"></app-interests>
+        <app-projects *ngIf="commandItem.command === 'projects'"></app-projects>
+        <app-skills *ngIf="commandItem.command === 'skills'"></app-skills>
+        <app-themes *ngIf="commandItem.command.startsWith('themes')" [command]="commandItem.command"></app-themes>
+        <app-welcome *ngIf="commandItem.command === 'welcome'"></app-welcome>
+        <app-work *ngIf="commandItem.command === 'work'"></app-work>
 
-        <div class="my-2" *ngSwitchCase="'gui'">Portfolio website is under development... Coming soon!</div>
+        <div class="my-2" *ngIf="commandItem.command === 'gui'">
+          Portfolio website is under development... Coming soon!
+        </div>
       </div>
 
       <div *ngIf="!commandItem.exists">

@@ -22,5 +22,7 @@ export enum ECommandType {
   SKILLS = 'skills',
   THEMES = 'themes',
   WELCOME = 'welcome',
-  WORK = 'work'
+  WORK = 'work',
+  THEMES_SET_DARK = 'themes set dark',
+  THEMES_SET_LIGHT = 'themes set light'
 }

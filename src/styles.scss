@@ -7,32 +7,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--dark-blue);
 
   @extend .font-family-monospace;
-  @extend .text-columbia-blue;
 }
 
 .font-family-monospace {
   font-family: monospace;
   font-weight: 500;
   font-size: 16px;
-}
-
-.text-columbia-blue {
-  color: var(--columbia-blue);
-}
-
-.text-bright-pink {
-  color: var(--bright-pink);
-}
-
-.text-guppie-green {
-  color: var(--guppie-green);
-}
-
-.text-blaze-orange {
-  color: var(--blaze-orange);
 }
 
 .d-none {
@@ -53,10 +35,6 @@ body {
 
 .w-100 {
   width: 100%;
-}
-
-b {
-  @extend .text-blaze-orange;
 }
 
 ol {
@@ -83,7 +61,6 @@ ul {
 
 a.underline-hover-effect {
   text-decoration: none;
-  color: var(--bright-pink);
 }
 
 .underline-hover-effect {
@@ -99,7 +76,6 @@ a.underline-hover-effect {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: var(--bright-pink);
   transition: width 0.25s ease-out;
 }
 
