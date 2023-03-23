@@ -8,6 +8,6 @@ import { availableCommands, availableControls } from 'src/app/shared/data/comman
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HelpComponent {
-  availableCommands = availableCommands;
+  availableCommands = availableCommands.filter((command) => !command.parent);
   availableControls = availableControls;
 }
