@@ -46,6 +46,11 @@
                 "inject": false
               },
               {
+                "input": "src/styles/espresso.theme.css",
+                "bundleName": "espresso",
+                "inject": false
+              },
+              {
                 "input": "src/styles/paradise.theme.css",
                 "bundleName": "paradise",
                 "inject": false

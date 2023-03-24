@@ -1,6 +1,7 @@
 export enum ETheme {
   DARK = 'dark',
+  ESPRESSO = 'espresso',
   LIGHT = 'light',
-  UBUNTU = 'ubuntu',
-  PARADISE = 'paradise'
+  PARADISE = 'paradise',
+  UBUNTU = 'ubuntu'
 }

@@ -1,46 +1,46 @@
 body {
-  background-color: var(--raisin-black);
-  color: var(--light-goldenrod-yellow);
+  background-color: var(--chinese-black);
+  color: var(--white);
 }
 
 input {
-  color: var(--light-goldenrod-yellow);
-  caret-color: var(--guppie-green);
+  color: var(--white);
+  caret-color: var(--malachite);
 }
 
 .profile {
-  color: var(--bright-pink);
+  color: var(--cg-red);
 }
 
 .terminal-label {
-  color: var(--guppie-green);
+  color: var(--malachite);
 }
 
 a.underline-hover-effect {
-  color: var(--bright-pink);
+  color: var(--spanish-yellow);
 }
 
 .underline-hover-effect::before {
-  background-color: var(--bright-pink);
+  background-color: var(--spanish-yellow);
 }
 
 b {
-  color: var(--cinnabar);
+  color: var(--bright-navy-blue);
 }
 
 .hightlight-secondary {
-  color: var(--light-goldenrod-yellow);
+  color: var(--white);
 }
 
 .chip {
-  background-color: var(--light-goldenrod-yellow);
+  background-color: var(--white);
   color: var(--charcoal);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--raisin-black);
+  background: var(--chinese-black);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--liver);
+  background: var(--dark-gunmetal);
 }
