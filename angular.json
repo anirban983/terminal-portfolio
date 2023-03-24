@@ -39,6 +39,11 @@
                 "input": "src/styles/light.theme.css",
                 "bundleName": "light",
                 "inject": false
+              },
+              {
+                "input": "src/styles/ubuntu.theme.css",
+                "bundleName": "ubuntu",
+                "inject": false
               }
             ],
             "stylePreprocessorOptions": {

@@ -3,16 +3,12 @@ body {
   color: var(--columbia-blue);
 }
 
-.title-bar {
-  background-color: var(--light-gray);
-}
-
 input {
   color: var(--columbia-blue);
   caret-color: var(--guppie-green);
 }
 
-.link {
+.profile {
   color: var(--bright-pink);
 }
 
@@ -39,4 +35,12 @@ b {
 .chip {
   background-color: var(--columbia-blue);
   color: var(--charcoal);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-gunmetal);
 }

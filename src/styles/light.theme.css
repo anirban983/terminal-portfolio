@@ -3,16 +3,12 @@ body {
   background-color: var(--lotion);
 }
 
-.title-bar {
-  background-color: var(--light-gray);
-}
-
 input {
   color: var(--charcoal);
   caret-color: var(--skobeloff);
 }
 
-.link {
+.profile {
   color: var(--blaze-orange);
 }
 
@@ -39,4 +35,12 @@ b {
 .chip {
   background-color: var(--columbia-blue);
   color: var(--charcoal);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lotion);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--argent);
 }

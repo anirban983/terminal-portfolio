@@ -99,6 +99,10 @@ li {
   font-size: 16px;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
 @media only screen and (max-width: 1023px) {
   br.bg-screen {
     display: none;

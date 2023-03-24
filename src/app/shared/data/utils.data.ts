@@ -1,4 +1,5 @@
 import { ECommandType } from '../models/commands.model';
+import { ETheme } from '../models/themes.model';
 
 export const email = 'anirbankar983@gmail.com';
 export const cvURL = 'https://1drv.ms/b/s!AkD34JHCNHdBg6csbgpvmbTLz81IUA?e=oOxFkn';
@@ -139,4 +140,4 @@ export const skills = [
   'Machine Learning',
   'Natural Language Processing'
 ];
-export const availableThemes = ['dark', 'light'];
+export const availableThemes = [...Object.values(ETheme)];

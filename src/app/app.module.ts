@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TerminalModule } from './components/terminal/terminal.module';
-import { TitleBarModule } from './components/title-bar/title-bar.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, TerminalModule, TitleBarModule],
+  imports: [BrowserModule, TerminalModule],
   providers: [],
   bootstrap: [AppComponent]
 })

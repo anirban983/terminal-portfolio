@@ -24,5 +24,6 @@ export enum ECommandType {
   WELCOME = 'welcome',
   WORK = 'work',
   THEMES_SET_DARK = 'themes set dark',
-  THEMES_SET_LIGHT = 'themes set light'
+  THEMES_SET_LIGHT = 'themes set light',
+  THEMES_SET_UBUNTU = 'themes set ubuntu'
 }
