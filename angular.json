@@ -44,6 +44,11 @@
                 "input": "src/styles/ubuntu.theme.css",
                 "bundleName": "ubuntu",
                 "inject": false
+              },
+              {
+                "input": "src/styles/paradise.theme.css",
+                "bundleName": "paradise",
+                "inject": false
               }
             ],
             "stylePreprocessorOptions": {

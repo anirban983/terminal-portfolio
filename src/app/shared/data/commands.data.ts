@@ -18,7 +18,8 @@ export const availableCommands = [
   { name: ECommandType.WORK, description: 'my work experience', parent: null },
   { name: ECommandType.THEMES_SET_DARK, description: 'set dark theme', parent: ECommandType.THEMES },
   { name: ECommandType.THEMES_SET_LIGHT, description: 'set light theme', parent: ECommandType.THEMES },
-  { name: ECommandType.THEMES_SET_UBUNTU, description: 'set ubuntu theme', parent: ECommandType.THEMES }
+  { name: ECommandType.THEMES_SET_UBUNTU, description: 'set ubuntu theme', parent: ECommandType.THEMES },
+  { name: ECommandType.THEMES_SET_PARADISE, description: 'set paradise theme', parent: ECommandType.THEMES }
 ];
 
 export const availableControls = [
