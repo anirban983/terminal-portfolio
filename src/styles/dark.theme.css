@@ -1,5 +1,5 @@
 body {
-  background-color: var(--dark-blue);
+  background-color: var(--rich-black);
   color: var(--columbia-blue);
 }
 
@@ -38,7 +38,7 @@ b {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--dark-blue);
+  background: var(--rich-black);
 }
 
 ::-webkit-scrollbar-thumb {
