@@ -22,7 +22,7 @@ I have created a terminal version of my portfolio website using Angular 15, whic
 
 ## Multiple Themes
 
-Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
+Currently, this website supports 5 themes. Type `themes` in the terminal for more info.
 ![terminal-portfolio-themes](/src/assets/images/themes.svg)
 
 ## Lighthouse Score
