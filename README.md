@@ -1,27 +1,76 @@
-# TerminalPortfolio
+# Terminal Portfolio Website by Anirban Kar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+![Terminal Portfolio Website by Anirban Kar](/src/assets/images/terminal_portfolio.svg)
 
-## Development server
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)![Github Page](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I have created a terminal version of my portfolio website using Angular 15, which offers support for multiple themes and enables the use of keyboard shortcuts for certain functions.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Responsive Design 📱💻
+- Multiple themes 🎨
+- Autocomplete feature ✨ (TAB | Ctrl + i)
+- Go previous and next command ⬆️⬇️
 
-## Build
+## Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Frontend** - [Angular](https://angular.io/) 
+**Styling** - [SCSS](https://sass-lang.com/)  
+**UI/UX** - [Figma](https://figma.com/)  
+**Deployment** - [Github Actions](https://github.com/features/actions), [Github Pages](https://pages.github.com/)
 
-## Running unit tests
+## Multiple Themes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
+![terminal-portfolio-themes](/src/assets/images/themes.svg)
 
-## Running end-to-end tests
+## Lighthouse Score
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<p align="center">
+<img width="710" alt="Anirban Kar Terminal Website Lighthouse Score" src="src/assets/images/lighthouse_report.svg">
+</p>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Running Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/satnaing/terminal-portfolio.git
+```
+
+Go to the project directory
+
+```bash
+cd terminal-portfolio
+```
+
+Remove remote origin
+
+```bash
+git remote remove origin
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the server
+
+```bash
+npm start
+```
+
+## Inspiration and Credits
+
+These following websites provided some inspiration for creating this type of terminal website. Only some features and functionalities are inspired by these following websites. All codes are written on my own.
+
+- [Sat Naing](https://terminal.satnaing.dev/)
+- [Forrest](https://fkcodes.com/)
+
+## Author
+
+- [Anirban kar](https://www.linkedin.com/in/anirban-kar-498027130/)
