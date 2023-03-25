@@ -37,7 +37,7 @@ Currently, this website supports 5 themes. Type `themes` in the terminal for mor
 Clone the project
 
 ```bash
-git clone https://github.com/satnaing/terminal-portfolio.git
+git clone https://github.com/anirban983/terminal-portfolio.git
 ```
 
 Go to the project directory
