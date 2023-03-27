@@ -68,6 +68,7 @@ npm start
 
 These following websites provided some inspiration for creating this type of terminal website. Only some features and functionalities are inspired by these following websites. All codes are written on my own.
 
+- [Ankit Singh](https://dev-ankit.web.app/)
 - [Sat Naing](https://terminal.satnaing.dev/)
 - [Forrest](https://fkcodes.com/)
 
